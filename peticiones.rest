@@ -1,0 +1,74 @@
+@host = http://localhost:3000
+
+### ----  --  ----- Autores ----  -----  ####
+
+### GETALL
+GET {{host}}/api/autores
+
+### GET by ID
+GET {{host}}/api/autores/13
+
+### POST
+POST {{host}}/api/autores
+Content-Type: application/json
+
+{
+
+    "nombre": "kakaroto4",
+    "email": "kakaroto4@dragonball.com",
+    "imagen": "kakaroto4.jpg"
+
+}
+
+### PUT
+PUT {{host}}/api/autores/13
+Content-Type: application/json
+
+{
+    "nombre": "vegetaupdate",
+    "email": "vegetaupdate@gmail.com",
+    "imagen": "vegetaupdate.jpg"
+}
+
+### DELETE
+DELETE {{host}}/api/autores/7
+
+
+### ----  --  ----- POSTS ----  -----  ####
+
+### GET
+GET {{host}}/api/posts
+
+### GET by ID
+GET {{host}}/api/posts/21
+
+### GET by AutorId
+GET {{host}}/api/posts/autor/8
+
+### POST
+POST {{host}}/api/posts
+Content-Type: application/json
+
+{
+     "titulo": "La batalla contra radix",
+      "descripcion": "post sobre la batalla contra radix",
+      "fecha_creacion": "2025-01-02 10:00:00",
+      "categoria": "Batallas",
+      "autor_id": 8
+}
+
+### PUT
+PUT {{host}}/api/posts/40
+Content-Type: application/json
+
+{
+    
+    "titulo": "La batalla contra radix update",
+    "descripcion": "post sobre la batalla contra radixa",
+    "fecha_creacion": "2025-01-02 10:00:00",
+    "categoria": "Batallas",
+    "autor_id": 8
+}
+
+### DELETE
+DELETE {{host}}/api/posts/40

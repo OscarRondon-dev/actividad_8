@@ -6,14 +6,14 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Route configuration
-// Ex.
-// app.use('/api', require('./routes/api'));
+
+app.use('/api', require('./routes/api.routes'));
 
 // Error handler
 app.use((err, req, res, next) => {
-    console.error(err.stack)
-    res.status(500).json(err);
-})
+    console.error(err.stack);
+    res.status(500).json({ error: err.message });
+});
+
 
 module.exports = app;
